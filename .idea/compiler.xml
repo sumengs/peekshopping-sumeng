@@ -10,8 +10,10 @@
         <module name="peekshopping-service-api" />
         <module name="eureka-client" />
         <module name="eureka-server-one" />
+        <module name="peekshopping-common-db" />
         <module name="eureka-server-two" />
         <module name="peekshopping-web" />
+        <module name="peekshopping-common" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +22,8 @@
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server-one" options="-parameters" />
       <module name="eureka-server-two" options="-parameters" />
+      <module name="peekshopping-common" options="-parameters" />
+      <module name="peekshopping-common-db" options="-parameters" />
       <module name="peekshopping-eureka" options="-parameters" />
       <module name="peekshopping-service" options="-parameters" />
       <module name="peekshopping-service-api" options="-parameters" />
