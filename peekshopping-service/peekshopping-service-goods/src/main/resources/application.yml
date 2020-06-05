@@ -1,0 +1,38 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: goods
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    # 学校
+    # url: jdbc:mysql://192.168.26.61:3306/peekshopping_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    # 家里
+    url: jdbc:mysql://192.168.1.61:3306/peekshopping_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka, http://127.0.0.1:8762/eureka
+  instance:
+    prefer-ip-address: true
+
+feign:
+  hystrix:
+    enabled: true
+
+
+
+#hystrix 配置
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          #如果enabled设置为false，则请求超时交给ribbon控制
+          enabled: true
+        isolation:
+          strategy: SEMAPHORE

@@ -7,8 +7,8 @@
     <file url="file://$PROJECT_DIR$/peekshopping-eureka/eureka-server-one/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/peekshopping-eureka/eureka-server-one/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/peekshopping-eureka/eureka-server-two/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/peekshopping-service-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/peekshopping-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/peekshopping-service-api/peekshopping-service-goods-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/peekshopping-service/peekshopping-service-goods/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/peekshopping-web/src/main/java" charset="UTF-8" />
   </component>
 </project>

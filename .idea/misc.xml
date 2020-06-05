@@ -13,6 +13,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/eureka-server-one/pom.xml" />
+        <option value="$PROJECT_DIR$/peekshopping-service-api/peekshopping-service-goods/pom.xml" />
       </set>
     </option>
   </component>

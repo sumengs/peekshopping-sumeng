@@ -2,15 +2,16 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="peekshopping-service" />
-        <module name="peekshopping-service-api" />
         <module name="eureka-client" />
-        <module name="eureka-server-one" />
+        <module name="peekshopping-service-goods" />
         <module name="peekshopping-common-db" />
+        <module name="peekshopping-service-goods-api" />
+        <module name="eureka-server-one" />
         <module name="eureka-server-two" />
         <module name="peekshopping-web" />
         <module name="peekshopping-common" />
@@ -27,6 +28,8 @@
       <module name="peekshopping-eureka" options="-parameters" />
       <module name="peekshopping-service" options="-parameters" />
       <module name="peekshopping-service-api" options="-parameters" />
+      <module name="peekshopping-service-goods" options="-parameters" />
+      <module name="peekshopping-service-goods-api" options="-parameters" />
       <module name="peekshopping-web" options="-parameters" />
     </option>
   </component>
