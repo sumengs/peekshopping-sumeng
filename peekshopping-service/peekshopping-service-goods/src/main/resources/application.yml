@@ -4,14 +4,25 @@ server:
 spring:
   application:
     name: goods
+  # 学校
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    # 学校
-    # url: jdbc:mysql://192.168.26.61:3306/peekshopping_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-    # 家里
-    url: jdbc:mysql://192.168.1.61:3306/peekshopping_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://192.168.26.61:3306/peekshopping_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: 123456
+
+#   家里
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.1.61:3306/peekshopping_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+#    username: root
+#    password: 123456
+
+
+
+
+
+
 
 eureka:
   client:

@@ -13,6 +13,7 @@ public interface BrandService {
 
     /**
      * 查询所有
+     *
      * @return
      */
     public List<Brand> findAll();
@@ -20,6 +21,7 @@ public interface BrandService {
 
     /**
      * 根据id查询
+     *
      * @param id
      * @return
      */
@@ -28,6 +30,7 @@ public interface BrandService {
 
     /**
      * 添加品牌
+     *
      * @param brand
      */
     public void insertBrand(Brand brand);
@@ -35,12 +38,14 @@ public interface BrandService {
 
     /**
      * 修改品牌
+     *
      * @param brand
      */
     public void updateBrand(Brand brand);
 
     /**
      * 删除品牌
+     *
      * @param id
      */
     public void deleteById(int id);
@@ -59,5 +64,11 @@ public interface BrandService {
      * 分页加条件查询
      */
     public List<Brand> pageList(Map<String,Object> searchMap, int page, int size);
+
+
+    /**
+     * 根据商品分类查询品牌列表
+     */
+    List<Map> findBrandListByCategoryName(String categoryName);
 
 }

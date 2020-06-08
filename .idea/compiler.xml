@@ -7,29 +7,59 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka-client" />
-        <module name="peekshopping-service-goods" />
-        <module name="peekshopping-common-db" />
-        <module name="peekshopping-service-goods-api" />
-        <module name="eureka-server-one" />
-        <module name="eureka-server-two" />
+        <module name="peekshopping-service-system-api" />
         <module name="peekshopping-web" />
+        <module name="peekshopping-service-order-api" />
+        <module name="peekshopping-service-goods" />
+        <module name="eureka-server-one" />
+        <module name="eureka-client" />
+        <module name="peekshopping-service-user" />
+        <module name="peekshopping-service-order" />
+        <module name="peekshopping-service-business" />
+        <module name="peekshopping-service-goods-api" />
         <module name="peekshopping-common" />
+        <module name="eureka-server-two" />
+        <module name="peekshopping-service-config" />
+        <module name="peekshopping-service-config-api" />
+        <module name="peekshopping-service-user-api" />
+        <module name="peekshopping-service-system" />
+        <module name="peekshopping-gateway" />
+        <module name="peekshopping-common-db" />
+        <module name="peekshopping-canal" />
+        <module name="peekshopping-service-business-api" />
+        <module name="peekshopping-service-file" />
+        <module name="untitled" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="untitled" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server-one" options="-parameters" />
       <module name="eureka-server-two" options="-parameters" />
+      <module name="peekshopping-canal" options="-parameters" />
       <module name="peekshopping-common" options="-parameters" />
       <module name="peekshopping-common-db" options="-parameters" />
       <module name="peekshopping-eureka" options="-parameters" />
+      <module name="peekshopping-gateway" options="-parameters" />
       <module name="peekshopping-service" options="-parameters" />
       <module name="peekshopping-service-api" options="-parameters" />
+      <module name="peekshopping-service-business" options="-parameters" />
+      <module name="peekshopping-service-business-api" options="-parameters" />
+      <module name="peekshopping-service-config" options="-parameters" />
+      <module name="peekshopping-service-config-api" options="-parameters" />
+      <module name="peekshopping-service-file" options="-parameters" />
       <module name="peekshopping-service-goods" options="-parameters" />
       <module name="peekshopping-service-goods-api" options="-parameters" />
+      <module name="peekshopping-service-order" options="-parameters" />
+      <module name="peekshopping-service-order-api" options="-parameters" />
+      <module name="peekshopping-service-system" options="-parameters" />
+      <module name="peekshopping-service-system-api" options="-parameters" />
+      <module name="peekshopping-service-user" options="-parameters" />
+      <module name="peekshopping-service-user-api" options="-parameters" />
       <module name="peekshopping-web" options="-parameters" />
     </option>
   </component>

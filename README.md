@@ -80,4 +80,14 @@ eureka-server-02：8762
  - update：更新所有字段，包括空值字段
  - updateSelective：只更新非空值的字段
  - deleteByPrimaryKey：通过主键删除
+ - selectByExample：通过example条件查询
+    - example设置代码
+ - PageHelper.startPage：分页查询
+ 
+ 
+#### 6. 跨域及解决方案
+
+
+
+#### 7. 通用Mapper自定义方法
  

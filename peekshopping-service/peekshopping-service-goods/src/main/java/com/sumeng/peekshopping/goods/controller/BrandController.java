@@ -14,7 +14,7 @@ import java.util.Map;
  * @date: 2020/6/5 19:12
  * @author: sumeng
  */
-
+@CrossOrigin
 @RestController
 @RequestMapping("/brand")
 public class BrandController {

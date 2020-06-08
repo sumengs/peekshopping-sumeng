@@ -13,6 +13,12 @@
     <packaging>pom</packaging>
     <modules>
         <module>peekshopping-service-goods-api</module>
+        <module>peekshopping-service-business-api</module>
+        <module>peekshopping-service-config-api</module>
+        <module>peekshopping-service-order-api</module>
+        <module>peekshopping-service-system-api</module>
+        <module>peekshopping-service-user-api</module>
+        <module>peekshopping-service-user-api</module>
     </modules>
 
     <dependencies>

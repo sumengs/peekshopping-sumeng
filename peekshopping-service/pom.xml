@@ -13,5 +13,12 @@
     <packaging>pom</packaging>
     <modules>
         <module>peekshopping-service-goods</module>
+        <module>peekshopping-service-business</module>
+        <module>peekshopping-service-file</module>
+        <module>peekshopping-service-config</module>
+        <module>peekshopping-service-order</module>
+        <module>peekshopping-service-system</module>
+        <module>peekshopping-service-order</module>
+        <module>peekshopping-service-user</module>
     </modules>
 </project>

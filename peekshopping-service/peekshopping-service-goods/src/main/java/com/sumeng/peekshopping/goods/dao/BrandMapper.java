@@ -7,5 +7,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @date: 2020/6/5 19:11
  * @author: sumeng
  */
+
 public interface BrandMapper extends Mapper<Brand> {
 }

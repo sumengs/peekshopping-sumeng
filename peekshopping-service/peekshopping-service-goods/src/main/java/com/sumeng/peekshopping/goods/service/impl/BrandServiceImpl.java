@@ -24,6 +24,7 @@ public class BrandServiceImpl implements BrandService {
 
     /**
      * 查询所有品牌信息
+     *
      * @return
      */
     @Override
@@ -33,6 +34,7 @@ public class BrandServiceImpl implements BrandService {
 
     /**
      * 根据id查询品牌信息
+     *
      * @param id
      * @return
      */
@@ -43,6 +45,7 @@ public class BrandServiceImpl implements BrandService {
 
     /**
      * 添加品牌信息
+     *
      * @param brand
      */
     @Override
@@ -53,6 +56,7 @@ public class BrandServiceImpl implements BrandService {
 
     /**
      * 更新品牌信息
+     *
      * @param brand
      */
     @Override
@@ -63,6 +67,7 @@ public class BrandServiceImpl implements BrandService {
 
     /**
      * 删除品牌信息
+     *
      * @param id
      */
     @Override
@@ -73,48 +78,66 @@ public class BrandServiceImpl implements BrandService {
 
     /**
      * 品牌列表条件查询
+     *
      * @param searchMap
      * @return
      */
     @Override
     public List<Brand> list(Map<String, Object> searchMap) {
-
         Example example = brandExample(searchMap);
         List<Brand> brandList = brandMapper.selectByExample(example);
         return brandList;
-
     }
 
+
+    /**
+     * 分页查询
+     *
+     * @param page 页面
+     * @param size 每页的数据
+     * @return
+     */
     @Override
     public List<Brand> pageList(int page, int size) {
-        PageHelper.startPage(page,size);
+        PageHelper.startPage(page, size);
         return brandMapper.selectAll();
     }
 
+
+    /**
+     * 分页+条件查询
+     *
+     * @param searchMap
+     * @param page
+     * @param size
+     * @return
+     */
     @Override
     public List<Brand> pageList(Map<String, Object> searchMap, int page, int size) {
         Example example = brandExample(searchMap);
-        PageHelper.startPage(page,size);
+        PageHelper.startPage(page, size);
         List<Brand> brandList = brandMapper.selectByExample(example);
         return brandList;
-
     }
 
-    private Example brandExample(Map<String,Object> searchMap) {
-        Example example = new Example(Brand.class);
+    @Override
+    public List<Map> findBrandListByCategoryName(String categoryName) {
+        return null;
+    }
 
+
+    private Example brandExample(Map<String, Object> searchMap) {
+        Example example = new Example(Brand.class);
         //封装查询条件
         Example.Criteria criteria = example.createCriteria();
-
         if (searchMap != null) {
             //品牌名称（模糊）like
             if (searchMap.get("name") != null && !searchMap.get("name").equals("")) {
-                criteria.andLike("name","%" + searchMap.get("name") + "%");
+                criteria.andLike("name", "%" + searchMap.get("name") + "%");
             }
-
             //品牌首字母精确查询
             if (searchMap.get("letter") != null && !searchMap.get("letter").equals("")) {
-                criteria.andEqualTo("letter",searchMap.get("letter"));
+                criteria.andEqualTo("letter", searchMap.get("letter"));
             }
         }
 
