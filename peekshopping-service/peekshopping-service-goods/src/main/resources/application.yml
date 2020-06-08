@@ -5,12 +5,18 @@ spring:
   application:
     name: goods
   # 学校
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.26.61:3306/peekshopping_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+#    username: root
+#    password: 123456
+
+  # 阿里云
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.26.61:3306/peekshopping_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://47.97.218.10:3306/peekshopping_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: 123456
-
+    password: 362425
 #   家里
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver

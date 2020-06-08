@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.sql.Array;
+
 /**
  * 统一异常处理类
  *
@@ -20,8 +22,8 @@ public class BaseExceptionHandler {
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
-    public Result error(Exception e) {
+    public Result<Array> error(Exception e) {
         e.printStackTrace();
-        return new Result(false, StatusCode.ERROR, e.getMessage());
+        return new Result<>(false, StatusCode.ERROR, e.getMessage(), null);
     }
 }

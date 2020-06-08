@@ -10,12 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>peekshopping-gateway</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>peekshopping-gateway-system</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>

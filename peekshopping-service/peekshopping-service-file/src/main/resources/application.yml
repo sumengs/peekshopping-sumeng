@@ -1,0 +1,19 @@
+spring:
+  servlet:
+    multipart:
+      file-size-threshold: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8010
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka, http://127.0.0.1:8762/eureka
+  instance:
+    prefer-ip-address: true
+
+feign:
+  hystrix:
+    enabled: true

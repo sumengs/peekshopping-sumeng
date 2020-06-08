@@ -6,69 +6,89 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 品牌Service接口
+ *
  * @date: 2020/6/5 19:11
  * @author: sumeng
  */
 public interface BrandService {
 
     /**
-     * 查询所有
+     * 查询所有品牌信息
      *
-     * @return
+     * @return 所有品牌信息
      */
-    public List<Brand> findAll();
+    List<Brand> findAllBrand();
 
 
     /**
-     * 根据id查询
+     * 根据品牌id查询品牌信息
      *
-     * @param id
-     * @return
+     * @param id 品牌id
+     * @return 品牌信息
      */
-    public Brand findById(int id);
+    Brand findBrandById(int id);
 
 
     /**
-     * 添加品牌
+     * 添加品牌信息
+     *
+     * @param brand 品牌信息
+     */
+    void insertBrand(Brand brand);
+
+
+    /**
+     * 修改品牌信息
      *
      * @param brand
      */
-    public void insertBrand(Brand brand);
-
-
-    /**
-     * 修改品牌
-     *
-     * @param brand
-     */
-    public void updateBrand(Brand brand);
+    void updateBrand(Brand brand);
 
     /**
      * 删除品牌
      *
      * @param id
      */
-    public void deleteById(int id);
+    void deleteBrandById(int id);
 
     /**
-     * 品牌列表查询
+     * 按条件查询品牌信息
+     *
+     * @param searchMap 查询条件
+     * @return 查询结果
      */
-    public List<Brand> list(Map<String,Object> searchMap);
+    List<Brand> searchBrandList(Map<String, Object> searchMap);
+
 
     /**
-     * 分页查询
+     * 分页查询所有品牌新
+     *
+     * @param page 页码
+     * @param size 每页显示数量
+     * @return 查询结果
      */
-    public List<Brand> pageList(int page, int size);
+    List<Brand> pageList(int page, int size);
+
 
     /**
      * 分页加条件查询
+     *
+     * @param searchMap 查询条件
+     * @param page      页码
+     * @param size      每页显示数量
+     * @return 查询结果
      */
-    public List<Brand> pageList(Map<String,Object> searchMap, int page, int size);
+    List<Brand> pageList(Map<String, Object> searchMap, int page, int size);
 
 
     /**
      * 根据商品分类查询品牌列表
+     *
+     * @param categoryName 分类名称
+     * @return 查询结果
      */
     List<Map> findBrandListByCategoryName(String categoryName);
+
 
 }

@@ -25,42 +25,44 @@ public class BrandServiceImpl implements BrandService {
     /**
      * 查询所有品牌信息
      *
-     * @return
+     * @return 所有品牌信息
      */
     @Override
-    public List<Brand> findAll() {
+    public List<Brand> findAllBrand() {
         return brandMapper.selectAll();
     }
 
     /**
      * 根据id查询品牌信息
      *
-     * @param id
-     * @return
+     * @param id 品牌id
+     * @return 品牌信息
      */
     @Override
-    public Brand findById(int id) {
+    public Brand findBrandById(int id) {
         return brandMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 添加品牌信息
      *
-     * @param brand
+     * @param brand 品牌信息
      */
     @Override
-    @Transactional
+    @Transactional(rollbackFor = {Exception.class})
     public void insertBrand(Brand brand) {
         brandMapper.insertSelective(brand);
+
+
     }
 
     /**
      * 更新品牌信息
      *
-     * @param brand
+     * @param brand 品牌信息
      */
     @Override
-    @Transactional
+    @Transactional(rollbackFor = {Exception.class})
     public void updateBrand(Brand brand) {
         brandMapper.updateByPrimaryKeySelective(brand);
     }
@@ -68,25 +70,24 @@ public class BrandServiceImpl implements BrandService {
     /**
      * 删除品牌信息
      *
-     * @param id
+     * @param id 品牌信息
      */
     @Override
-    @Transactional
-    public void deleteById(int id) {
+    @Transactional(rollbackFor = {Exception.class})
+    public void deleteBrandById(int id) {
         brandMapper.deleteByPrimaryKey(id);
     }
 
     /**
      * 品牌列表条件查询
      *
-     * @param searchMap
-     * @return
+     * @param searchMap 查询条件
+     * @return 品牌信息
      */
     @Override
-    public List<Brand> list(Map<String, Object> searchMap) {
+    public List<Brand> searchBrandList(Map<String, Object> searchMap) {
         Example example = brandExample(searchMap);
-        List<Brand> brandList = brandMapper.selectByExample(example);
-        return brandList;
+        return brandMapper.selectByExample(example);
     }
 
 
@@ -116,13 +117,18 @@ public class BrandServiceImpl implements BrandService {
     public List<Brand> pageList(Map<String, Object> searchMap, int page, int size) {
         Example example = brandExample(searchMap);
         PageHelper.startPage(page, size);
-        List<Brand> brandList = brandMapper.selectByExample(example);
-        return brandList;
+        return brandMapper.selectByExample(example);
     }
 
+    /**
+     * 根据商品分类查询品牌列表
+     *
+     * @param categoryName 分类名称
+     * @return 品牌列表
+     */
     @Override
     public List<Map> findBrandListByCategoryName(String categoryName) {
-        return null;
+        return brandMapper.findBrandListByCategoryName(categoryName);
     }
 
 
