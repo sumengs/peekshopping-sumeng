@@ -10,6 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>peekshopping-gateway-system</artifactId>
+    <dependencies>
+        <dependency>
+            <artifactId>peekshopping-common-db</artifactId>
+            <groupId>com.sumeng.peekshopping</groupId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

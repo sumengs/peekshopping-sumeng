@@ -13,6 +13,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * Brand实现类
+ *
  * @date: 2020/6/5 19:12
  * @author: sumeng
  */
@@ -96,7 +98,7 @@ public class BrandServiceImpl implements BrandService {
      *
      * @param page 页面
      * @param size 每页的数据
-     * @return
+     * @return 分页查询结果
      */
     @Override
     public List<Brand> pageList(int page, int size) {
@@ -108,10 +110,10 @@ public class BrandServiceImpl implements BrandService {
     /**
      * 分页+条件查询
      *
-     * @param searchMap
-     * @param page
-     * @param size
-     * @return
+     * @param searchMap 查询条件
+     * @param page      页码
+     * @param size      每页显示数量
+     * @return 品牌列表
      */
     @Override
     public List<Brand> pageList(Map<String, Object> searchMap, int page, int size) {
@@ -132,21 +134,28 @@ public class BrandServiceImpl implements BrandService {
     }
 
 
+    /**
+     * 获取example
+     *
+     * @param searchMap 查询
+     * @return example
+     */
     private Example brandExample(Map<String, Object> searchMap) {
         Example example = new Example(Brand.class);
         //封装查询条件
         Example.Criteria criteria = example.createCriteria();
         if (searchMap != null) {
+            String brandName = "name";
             //品牌名称（模糊）like
-            if (searchMap.get("name") != null && !searchMap.get("name").equals("")) {
+            if (searchMap.get(brandName) != null && !"".equals(searchMap.get(brandName))) {
                 criteria.andLike("name", "%" + searchMap.get("name") + "%");
             }
             //品牌首字母精确查询
-            if (searchMap.get("letter") != null && !searchMap.get("letter").equals("")) {
+            String brandLetter = "letter";
+            if (searchMap.get(brandLetter) != null && !"".equals(searchMap.get(brandLetter))) {
                 criteria.andEqualTo("letter", searchMap.get("letter"));
             }
         }
-
         return example;
     }
 }
