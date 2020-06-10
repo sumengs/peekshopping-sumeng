@@ -5,6 +5,12 @@
 ```
 eureka-server-01：8761
 eureka-server-02：8762
+
+goods-service：8000
+system-service：8020
+
+gateway：8101
+
 ```
 
 

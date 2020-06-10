@@ -58,6 +58,7 @@ public class LogGlobalFilter implements GlobalFilter, Ordered {
                 append("; url=").append(url).
                 append(REQUEST_TAIL);
         log.info(requestMsg.toString());
+        requestMsg = new StringBuilder();
 
 
         ServerHttpResponse response = exchange.getResponse();
@@ -81,6 +82,7 @@ public class LogGlobalFilter implements GlobalFilter, Ordered {
                         responseMsg.append(";responseResult=").append(responseResult);
                         responseMsg.append(RESPONSE_TAIL);
                         log.info(responseMsg.toString());
+                        responseMsg = new StringBuilder();
                         return bufferFactory.wrap(content);
                     }));
                 }
