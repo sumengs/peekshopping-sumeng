@@ -9,7 +9,8 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 /**
- * @date: 2020/6/9 9:24
+ * 获取客户端的访问url
+ *
  * @author: sumeng
  */
 @Component
@@ -19,8 +20,8 @@ public class UrlFilter implements GlobalFilter, Ordered {
         System.out.println("经过了第二个过滤器");
         ServerHttpRequest request = exchange.getRequest();
         String path = request.getURI().getPath();
-        System.out.println(path);
-
+        System.out.println("path:" + path);
+        //放行
         return chain.filter(exchange);
     }
 

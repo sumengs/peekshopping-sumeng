@@ -1,6 +1,8 @@
 package com.sumeng.peekshopping.goods;
 
 import com.github.pagehelper.PageInterceptor;
+import com.sumeng.peekshopping.util.IdWorker;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -21,8 +23,15 @@ public class PeekShoppingGoodApplication {
     }
 
 
-//    @Bean
-//    public PageInterceptor get() {
-//        return new PageInterceptor();
-//    }
+    @Value("${workerId}")
+    private Integer workerId;
+
+
+    @Value("${dataCenterId}")
+    private Integer dataCenterId;
+
+    @Bean
+    public IdWorker idWorker() {
+        return new IdWorker(workerId, dataCenterId);
+    }
 }

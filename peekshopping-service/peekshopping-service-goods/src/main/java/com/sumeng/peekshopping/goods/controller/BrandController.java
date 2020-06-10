@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.Array;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -142,7 +141,7 @@ public class BrandController {
      * 根据分类名称查询品牌列表
      *
      * @param category 分类名称
-     * @return
+     * @return brandList
      */
     @GetMapping("/category/{category}")
     public Result<List<Map>> findBrandListByCategoryName(@PathVariable String category) {

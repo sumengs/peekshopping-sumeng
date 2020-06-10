@@ -8,8 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-import java.util.Objects;
-
 /**
  * system网关启动类
  *
@@ -25,13 +23,17 @@ public class GatewayApplication {
     }
 
 
-    //定义一个KeyResolver
+    /**
+     * 定义一个KeyResolver
+     *
+     * @return KeyResolver
+     */
     @Bean
-    public KeyResolver ipKeyResolver() {
+    public KeyResolver ipKeyResolver(){
         return new KeyResolver() {
             @Override
             public Mono<String> resolve(ServerWebExchange exchange) {
-                return Mono.just(Objects.requireNonNull(exchange.getRequest().getRemoteAddress()).getHostName());
+                return Mono.just(exchange.getRequest().getRemoteAddress().getHostName());
             }
         };
     }

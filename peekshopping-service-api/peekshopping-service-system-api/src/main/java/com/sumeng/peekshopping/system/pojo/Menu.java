@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * Menu实体类
@@ -13,7 +14,7 @@ import javax.persistence.Table;
  */
 @Data
 @Table(name = "tb_menu")
-public class Menu {
+public class Menu implements Serializable {
 
     /**
      * 菜单Id

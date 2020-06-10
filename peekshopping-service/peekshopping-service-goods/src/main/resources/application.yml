@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8000
 
 spring:
   application:
@@ -53,3 +53,7 @@ hystrix:
           enabled: true
         isolation:
           strategy: SEMAPHORE
+
+
+workerId: 0
+dataCenterId: 0

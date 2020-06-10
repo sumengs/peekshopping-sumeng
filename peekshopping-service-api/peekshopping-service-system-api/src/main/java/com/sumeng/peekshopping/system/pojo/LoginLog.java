@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * 登陆日志表
@@ -13,7 +14,7 @@ import javax.persistence.Table;
  */
 @Data
 @Table(name = "tb_login_log")
-public class LoginLog {
+public class LoginLog implements Serializable {
 
     /**
      * id

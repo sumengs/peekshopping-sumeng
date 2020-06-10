@@ -41,14 +41,14 @@ public interface BrandService {
     /**
      * 修改品牌信息
      *
-     * @param brand
+     * @param brand 品牌信息
      */
     void updateBrand(Brand brand);
 
     /**
      * 删除品牌
      *
-     * @param id
+     * @param id 品牌id
      */
     void deleteBrandById(int id);
 

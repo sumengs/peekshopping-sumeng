@@ -9,29 +9,30 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 import java.net.InetSocketAddress;
-import java.util.Objects;
 
 /**
- * @date: 2020/6/9 9:19
+ * 获取客户端的访问ip
+ *
  * @author: sumeng
  */
 @Component
 public class IpFilter implements GlobalFilter, Ordered {
+
+    //具体业务逻辑
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         //获取客户端的访问ip
         System.out.println("经过了第一个过滤器");
         ServerHttpRequest request = exchange.getRequest();
         InetSocketAddress remoteAddress = request.getRemoteAddress();
-        System.out.println("ip：" + Objects.requireNonNull(remoteAddress).getHostName());
-
+        System.out.println("ip:" + remoteAddress.getHostName());
         //放行
         return chain.filter(exchange);
-
     }
 
+    //过滤器的执行优先级,返回值越小,执行优先级越高
     @Override
     public int getOrder() {
-        return 2;
+        return 1;
     }
 }

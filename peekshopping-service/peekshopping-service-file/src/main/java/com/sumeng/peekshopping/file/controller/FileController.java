@@ -22,6 +22,12 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/file")
 public class FileController {
 
+    /**
+     * 文件上传
+     *
+     * @param file 文件
+     * @return 上传成功的url
+     */
     @PostMapping("/upload")
     public Result<String> uploadFile(MultipartFile file) {
         try {

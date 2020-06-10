@@ -1,8 +1,12 @@
+
+
 spring:
   servlet:
     multipart:
       file-size-threshold: 10MB
       max-request-size: 10MB
+  application:
+    name: file
 
 server:
   port: 8010

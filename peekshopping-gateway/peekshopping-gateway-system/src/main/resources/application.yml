@@ -5,9 +5,9 @@ spring:
     gateway:
       globalcors:
         cors-configurations:
-          '[/**]':
-            allowedOrgins: "*"
-            allowedMethods:
+          '[/**]': # 匹配所有请求
+            allowedOrigins: "*" #跨域处理 允许所有的域
+            allowedMethods: # 支持的方法
               - GET
               - POST
               - PUT
@@ -19,7 +19,7 @@ spring:
             - Path=/goods/**
           filters:
             - StripPrefix= 1
-            - name: RequestRateLimiter
+            - name: RequestRateLimiter #请求数限流 名字不能随便写
               args:
                 key-resolver: "#{@ipKeyResolver}"
                 redis-rate-limiter.replenishRate: 1 #令牌桶每秒填充平均速率
@@ -31,7 +31,7 @@ spring:
           filters:
             - StripPrefix= 1
 server:
-  port: 8024
+  port: 8101
 eureka:
   client:
     service-url:
