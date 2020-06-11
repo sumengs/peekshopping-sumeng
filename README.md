@@ -245,22 +245,22 @@ public KeyResolver ipKeyResolver(){
 
   ```java
    //生成jwt令牌
-          JwtBuilder jwtBuilder = Jwts.builder()
-                  .setId("66")//设置jwt编码
-                  .setSubject("黑马程序员")//设置jwt主题
-                  .setIssuedAt(new Date())//设置jwt签发日期
-                  //.setExpiration(date)//设置jwt的过期时间
-                  .claim("roles","admin")
-                  .claim("company","itheima")
-                  .signWith(SignatureAlgorithm.HS256, "itheima");
-  
-          //生成jwt
-          String jwtToken = jwtBuilder.compact();
-          System.out.println(jwtToken);
-  
-          //解析jwt,得到其内部的数据
-          Claims claims = Jwts.parser().setSigningKey("itheima").parseClaimsJws(jwtToken).getBody();
-          System.out.println(claims);
+  JwtBuilder jwtBuilder = Jwts.builder()
+          .setId("66")//设置jwt编码
+          .setSubject("黑马程序员")//设置jwt主题
+          .setIssuedAt(new Date())//设置jwt签发日期
+          //.setExpiration(date)//设置jwt的过期时间
+          .claim("roles","admin")
+          .claim("company","itheima")
+          .signWith(SignatureAlgorithm.HS256, "itheima");
+
+  //生成jwt
+  String jwtToken = jwtBuilder.compact();
+  System.out.println(jwtToken);
+
+  //解析jwt,得到其内部的数据
+  Claims claims = Jwts.parser().setSigningKey("itheima").parseClaimsJws(jwtToken).getBody();
+  System.out.println(claims);
   ```
 
 #### 12. 分布式ID生成解决方案
@@ -323,7 +323,7 @@ public KeyResolver ipKeyResolver(){
 
 - sale_num:后台填写，不能为负数，且初始为0
 
-### 依据SPU ID查询商品信息
+###### 依据SPU ID查询商品信息
 
 - 修改SPU
 - 建立索引
@@ -331,7 +331,7 @@ public KeyResolver ipKeyResolver(){
 
 
 
-### 修改SPU和SKU
+###### 修改SPU和SKU
 
 - SKU可以先删除后增加，达到修改的目的
 
@@ -412,3 +412,54 @@ public KeyResolver ipKeyResolver(){
 - 动作：
   - 物理删除SPU
   - 物理删除SKU
+  
+ 
+#### 14. Lua
+
+
+#### 15. nginx + lua + redis 实现广告缓存
+
+###### Nginx 
+
+- 负载均衡
+    - 轮间(加权)
+    - IP Hash
+- 反向代理
+- 静态资源服务器
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
