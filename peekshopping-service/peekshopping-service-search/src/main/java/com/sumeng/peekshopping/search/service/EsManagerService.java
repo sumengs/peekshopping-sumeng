@@ -24,4 +24,11 @@ public interface EsManagerService {
      * @param spuId spuId
      */
     void importDataToEsBySpuId(String spuId);
+
+
+    /**
+     * 根据spuId从ES索引库中删除
+     * @param spuId spuID
+     */
+    void delDataFromEsBySpuId(String spuId);
 }

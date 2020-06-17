@@ -21,8 +21,8 @@ public class GoodsDownListener {
     public void receiveMessage(String spuId) {
         System.out.println("接收到的消息为(下架)：" + spuId);
 
-        //查询skuList并导入索引库
-        esManagerService.importDataToEsBySpuId(spuId);
+        //查询skuList并从索引库中删除
+        esManagerService.delDataFromEsBySpuId(spuId);
 
     }
 }
