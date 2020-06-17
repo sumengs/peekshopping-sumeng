@@ -1,0 +1,52 @@
+# 端口
+server:
+  port: 8003
+
+# 服务名称
+spring:
+  application:
+    name: search-service
+  rabbitmq:
+    host: 192.168.246.129
+  redis:
+    host: 192.168.246.129
+  main:
+    allow-bean-definition-overriding: true # 当遇到同样的名字是的时候，是否允许覆盖注册
+
+  data:
+    elasticsearch:
+      cluster-name: docker-cluster
+      cluster-nodes: 192.168.246.129:9300
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka, http://127.0.0.1:8762/eureka
+  instance:
+    prefer-ip-address: true
+
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 600000
+        readTimeout: 600000
+        loggerLevel: basic
+
+
+
+
+#hystrix 配置
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          #如果enabled设置为false，则请求超时交给ribbon控制
+          enabled: false
+        isolation:
+          strategy: SEMAPHORE

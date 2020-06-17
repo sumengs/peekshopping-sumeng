@@ -7,7 +7,7 @@ import com.sumeng.peekshopping.goods.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Array;
+
 import java.util.List;
 import java.util.Map;
 
@@ -62,7 +62,7 @@ public class BrandController {
      * @return 添加状态
      */
     @PostMapping
-    public Result<Array> insertBrand(@RequestBody Brand brand) {
+    public Result<String> insertBrand(@RequestBody Brand brand) {
         brandService.insertBrand(brand);
         return new Result<>(true, StatusCode.OK, "添加成功", null);
     }
@@ -75,7 +75,7 @@ public class BrandController {
      * @return 修改状态
      */
     @PutMapping("/{id}")
-    public Result<Array> updateBrand(@RequestBody Brand brand,
+    public Result<String> updateBrand(@RequestBody Brand brand,
                                      @PathVariable Integer id) {
         brand.setId(id);
         brandService.updateBrand(brand);
@@ -89,7 +89,7 @@ public class BrandController {
      * @return 删除状态
      */
     @DeleteMapping("/{id}")
-    public Result<Array> deleteBrand(@PathVariable Integer id) {
+    public Result<String> deleteBrand(@PathVariable Integer id) {
         brandService.deleteBrandById(id);
         return new Result<>(true, StatusCode.OK, "删除成功", null);
     }

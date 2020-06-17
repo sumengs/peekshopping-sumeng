@@ -17,6 +17,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/peekshopping-service/peekshopping-service-order/pom.xml" />
         <option value="$PROJECT_DIR$/peekshopping-service-api/peekshopping-service-user-api/pom.xml" />
+        <option value="$PROJECT_DIR$/peekshopping-service/peekshopping-service-search/pom.xml" />
+        <option value="$PROJECT_DIR$/peekshopping-canal/pom.xml" />
+        <option value="$PROJECT_DIR$/peekshopping-eureka/eureka-server-one/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

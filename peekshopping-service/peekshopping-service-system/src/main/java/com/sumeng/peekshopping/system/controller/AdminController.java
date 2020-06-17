@@ -8,7 +8,7 @@ import com.sumeng.peekshopping.system.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Array;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -34,7 +34,7 @@ public class AdminController {
      * @return result
      */
     @PostMapping("/add")
-    public Result<Array> add(@RequestBody Admin admin) {
+    public Result<String> add(@RequestBody Admin admin) {
         adminService.add(admin);
         return new Result<>(true, StatusCode.OK, "添加成功");
     }

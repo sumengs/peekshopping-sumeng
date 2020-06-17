@@ -19,6 +19,7 @@
         <module>peekshopping-service-system-api</module>
         <module>peekshopping-service-user-api</module>
         <module>peekshopping-service-user-api</module>
+        <module>peekshopping-service-search-api</module>
     </modules>
 
     <dependencies>

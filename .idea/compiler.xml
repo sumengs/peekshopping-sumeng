@@ -8,13 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="peekshopping-web" />
+        <module name="peekshopping-service-search" />
         <module name="peekshopping-service-goods" />
         <module name="peekshopping-service-business-api" />
         <module name="eureka-server-one" />
         <module name="peekshopping-service-user" />
         <module name="peekshopping-service-config-api" />
-        <module name="peekshopping-service-order" />
+        <module name="peekshopping-service-search-api" />
         <module name="peekshopping-service-business" />
+        <module name="peekshopping-service-order" />
         <module name="peekshopping-service-goods-api" />
         <module name="peekshopping-common-db" />
         <module name="untitled" />
@@ -57,6 +59,8 @@
       <module name="peekshopping-service-goods-api" options="-parameters" />
       <module name="peekshopping-service-order" options="-parameters" />
       <module name="peekshopping-service-order-api" options="-parameters" />
+      <module name="peekshopping-service-search" options="-parameters" />
+      <module name="peekshopping-service-search-api" options="-parameters" />
       <module name="peekshopping-service-system" options="-parameters" />
       <module name="peekshopping-service-system-api" options="-parameters" />
       <module name="peekshopping-service-user" options="-parameters" />

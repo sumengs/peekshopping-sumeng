@@ -1,0 +1,32 @@
+canal:
+  client:
+    instances:
+      example:
+        host: 192.168.246.129
+        port: 11111
+        batchSize: 1000
+
+
+
+
+server:
+  port: 8201
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-one:8761/eureka, http://eureka-server-two:8762/eureka
+    register-with-eureka: true #注册
+    fetch-registry: true #拉取
+
+spring:
+  application:
+    name: canal
+  #  datasource:
+  #    driver-class-name: com.mysql.jdbc.Driver
+  #    url: jdbc:mysql://47.97.218.10:3306/peekshopping_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+  #    username: root
+  #    password: 362425
+  rabbitmq:
+    addresses: 192.168.246.129

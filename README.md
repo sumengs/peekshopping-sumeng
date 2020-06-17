@@ -6,10 +6,13 @@
 eureka-server-01：8761
 eureka-server-02：8762
 
-goods-service：8000
-system-service：8020
+goods-service：8001
+system-service：8002
+search-service：8003
 
 gateway：8101
+
+canal: 8201
 
 ```
 
@@ -416,7 +419,27 @@ public KeyResolver ipKeyResolver(){
  
 #### 14. Lua
 
+###### 什么是lua
 
+- 定义：一个轻量级基于C语言实现的脚本语言
+- 场景：
+    - 游戏开发
+    - 自动化运维(Lua、Python)
+    - Redis结合实现批量的原子性操作
+- 语言
+    - 注释
+        - 单行：--
+        - 多行：--[[--]]
+    - 关键字
+    - 变量
+        - 全局：无关键字
+        - 局部：local关键字
+    - 数据类型8种
+    - 流程控制
+        - 判断结束一定要使用end
+    - 函数的定义
+    - 导入其他函数库
+    
 #### 15. nginx + lua + redis 实现广告缓存
 
 ###### Nginx 
@@ -426,7 +449,36 @@ public KeyResolver ipKeyResolver(){
     - IP Hash
 - 反向代理
 - 静态资源服务器
--
+
+###### OpenResty
+
+- 集成了Nginx+lua
+- 对nginx做了优化
+
+###### 广告二级缓存方案
+
+>
+>方案一：访问的请求路径太长
+
+
+
+
+###### 搜索接口
+
+
+
+###### 搜索的业务
+
+
+
+
+###### 搜索的API实现代码
+
+- 查询结果的解析
+    - 解析查询的sku结果
+    - 解析查询的聚合结果
+        - 品牌聚合结果的分析
+            - 
 
 
 
