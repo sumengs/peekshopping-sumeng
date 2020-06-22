@@ -17,7 +17,8 @@ spring:
     elasticsearch:
       cluster-name: docker-cluster
       cluster-nodes: 192.168.246.129:9300
-
+  thymeleaf:
+    cache: false
 
 
 eureka:

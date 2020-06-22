@@ -11,5 +11,25 @@
 
     <artifactId>peekshopping-service-user</artifactId>
 
+    <dependencies>
+        <dependency>
+            <artifactId>peekshopping-service-user-api</artifactId>
+            <groupId>com.sumeng.peekshopping</groupId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <artifactId>peekshopping-common-db</artifactId>
+            <groupId>com.sumeng.peekshopping</groupId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

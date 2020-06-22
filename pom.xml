@@ -16,6 +16,7 @@
         <module>peekshopping-common-db</module>
         <module>peekshopping-canal</module>
         <module>peekshopping-gateway</module>
+        <module>peekshopping-user-oauth</module>
     </modules>
     <packaging>pom</packaging>
 

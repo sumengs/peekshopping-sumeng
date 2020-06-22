@@ -17,6 +17,7 @@
         <module name="peekshopping-service-config-api" />
         <module name="peekshopping-service-search-api" />
         <module name="peekshopping-service-business" />
+        <module name="peekshopping-gateway-web" />
         <module name="peekshopping-service-order" />
         <module name="peekshopping-service-goods-api" />
         <module name="untitled" />
@@ -25,6 +26,7 @@
         <module name="peekshopping-service-config" />
         <module name="peekshopping-gateway-system" />
         <module name="peekshopping-service-system" />
+        <module name="peekshopping-user-oauth" />
         <module name="peekshopping-common" />
         <module name="peekshopping-common-db" />
         <module name="peekshopping-canal" />
@@ -48,6 +50,7 @@
       <module name="peekshopping-eureka" options="-parameters" />
       <module name="peekshopping-gateway" options="-parameters" />
       <module name="peekshopping-gateway-system" options="-parameters" />
+      <module name="peekshopping-gateway-web" options="-parameters" />
       <module name="peekshopping-service" options="-parameters" />
       <module name="peekshopping-service-api" options="-parameters" />
       <module name="peekshopping-service-business" options="-parameters" />
@@ -65,6 +68,7 @@
       <module name="peekshopping-service-system-api" options="-parameters" />
       <module name="peekshopping-service-user" options="-parameters" />
       <module name="peekshopping-service-user-api" options="-parameters" />
+      <module name="peekshopping-user-oauth" options="-parameters" />
       <module name="peekshopping-web" options="-parameters" />
     </option>
   </component>

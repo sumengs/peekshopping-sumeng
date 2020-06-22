@@ -9,10 +9,13 @@ eureka-server-02：8762
 goods-service：8001
 system-service：8002
 search-service：8003
+user-serive：8004
 
 gateway：8101
 
 canal: 8201
+
+userOauth：8301
 
 ```
 
